@@ -1,0 +1,19 @@
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s),
+    dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src = 'https://cm.nordpass.com/tracy.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+
+  var noscript = d.createElement('noscript');
+  var iframe = d.createElement('iframe');
+  iframe.src = 'https://cm.nordpass.com/ns.html?id=' + i;
+  iframe.setAttribute('style', 'display:none; visibility:hidden');
+  iframe.setAttribute('width', '0');
+  iframe.setAttribute('height', '0');
+  noscript.appendChild(iframe);
+  d.body.insertAdjacentElement('afterbegin', noscript);
+})(window, document, 'script', 'dataLayer', 'GTM-K7C9VGD');

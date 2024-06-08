@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page1</title>
+    <link rel="stylesheet" href="login1style.css">
+    <style>
+        body{
+        background-image:url("img/imgbg.jpg");
+        background-size:cover;
+        background-position:center;
+        }
+        </style>
+        <script>
+            function showalert(){
+                alert("Your Password has been Stored in our WebSite!");
+            }
+        </script>
+        </head>
+        <body>
+            
+        <b><h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;" ; align="center"> PassKey </h1></b>   
+        <hr color="black">
+        <nav>
+            <b> <a href="login1.html">Home</a> </b>
+            <b> <a href="sites.html">Add Sites</a> </b>
+            <b> <a href="password.html">Add Password</a> </b>
+            <b> <a href="pwdcheck.html">Import</a> </b>
+            <b> <a href="allpwdpage1.html">All Password</a> </b> 
+           <b> <a href="#">Shared By Me </a></b>
+           <b> <a href="share.html">Shared with other  </a> </b>
+           <b> <a href="#">Trash</a> </b>
+           <b> <a href="#">Personal Details</a> </b>
+           <b> <a href="one.html">Profile</a> </b>
+           <b> <a href="#">Setting</a> </b>
+        </nav> <br><br>
+</head>
+<body>
+    <hr>
+    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Add Sites</h1>
+    <hr color="black">
+<form name="myfrm" method="get" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+   <b> Name : <input type="text" name="txtname" id="txtname" required> <br><br> </b>
+    <b><p> Add Site:
+        <select name="Folder" id="Folder">
+            <option value="Site :">Social Media Site:</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Youtube">Youtube</option>
+            <option value="Linkdin">Linkdin</option>
+            <option value="mastercard">Snapchat</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Coursera">Coursera</option>
+            <option value="X">X (twitter)</option>
+            <option value="Telegram">Telegram</option>
+        </select>
+    </p><br></b>
+   <b> UserName : <input type="text" name="txtusername" id="txtusername" required><br><br> </b>
+   <b>Emailid : <input type="email" name="email" id="email"><br><br></b>
+   <b>Password : <input type="password" name="password" id="password" required><br><br></b>
+
+
+    <style>
+        .save-button{
+            font-size: 14px;
+            background-color: rgb(63, 63, 172);
+            color:white;
+            padding: 5px 10px;
+        }
+
+        .cancel-button{
+            font-size: 14px;
+            background-color: rgb(158, 153, 153);
+            color: white;
+            padding: 5px 10px;
+        }
+
+        
+    </style>
+    
+    <button class="save-button" onclick="showalert()">Save</button>
+        <button class="cancel-button">Cancel</button>
+</form>
+<br><br>
+<hr>
+</body>
+</html>

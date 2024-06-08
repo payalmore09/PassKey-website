@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="importstyle.css">
+    <style>
+        body{
+        background-image:url("img/imgbg.jpg");
+        background-size:cover;
+        background-position:center;
+        }
+        </style>
+        <script>
+          function clickme(){
+            window.location.href="file:///D:/Desktop/project/sites.html";
+          }
+        </script>
+</head>
+        <body>
+            <div class="vertical-line"></div>
+            <hr color="black">
+        <b><h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;" ; align="center"> PassKey </h1></b>   
+        <hr color="black">
+        <nav>
+            <b> <a href="login1.html">Home</a> </b>
+            <b> <a href="sites.html">Add Sites</a> </b>
+            <b> <a href="password.html">Add Password</a> </b>
+            <b> <a href="pwdcheck.html">Import</a> </b>
+            <b> <a href="allpwdpage1.html">All Password</a> </b> 
+           <b> <a href="share.html">Shared By Me </a></b>
+           <b> <a href="#">Shared with other  </a> </b>
+           <b> <a href="#">Trash</a> </b>
+           <b> <a href="#">Personal Details</a> </b>
+           <b> <a href="one.html">Profile</a> </b>
+           <b> <a href="#">Setting</a> </b>
+        </nav> <br><br>
+  <style>
+    .button {
+      padding: 10px 20px;
+      border: none;
+      color: rgb(250, 247, 247);
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .green {
+      background-color: rgb(81, 132, 81);
+    }
+
+    .orange {
+      background-color: rgb(89, 125, 162);
+    }
+
+    .red {
+      background-color: rgb(29, 5, 67);
+    }
+  </style>
+    <fieldset style="background-color: rgb(209, 217, 216);"><b><h1 align="center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;" >Password Strength Checker</h1><hr>
+  <h2 align="left" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Import Your Password to Check</h2></b> <br>
+  <input type="password" id="password" placeholder="Enter your password";> <br><br>
+  <button class="button green">Weak</button>
+  <button class="button orange">Medium</button>
+  <button class="button red">Strong</button>
+<br><br>
+<button onclick="clickme()">Add Password To Your Social Site</a></button>
+
+
+  <script>
+    const passwordInput = document.getElementById('password');
+    const buttons = document.querySelectorAll('.button');
+
+    passwordInput.addEventListener('input', function() {
+      const password = passwordInput.value;
+      let strength = 0;
+
+      if (password.length >= 8) {
+        strength++;
+      }
+
+      if (/[a-z]/.test(password)) {
+        strength++;
+      }
+
+      if (/[A-Z]/.test(password)) {
+        strength++;
+      }
+
+      if (/[0-9]/.test(password)) {
+        strength++;
+      }
+
+      if (/[!@#$%^&*()]/.test(password)) {
+        strength++;
+      }
+
+      buttons.forEach(button => {
+        button.classList.remove('green', 'orange', 'red');
+      });
+
+      if (strength <= 2) {
+        buttons[0].classList.add('green');
+      } else if (strength <= 4) {
+        buttons[1].classList.add('orange');
+      } else {
+        buttons[2].classList.add('red');
+      }
+    });
+  </script>
+</fieldset> 
+</body>
+</html>
